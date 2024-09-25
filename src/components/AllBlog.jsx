@@ -11,6 +11,7 @@ export default function AllBlog() {
   useEffect(() => {
     getData(api);
   }, []);
+  console.log(data);
   return (
     <div>
       <div className="flex flex-wrap gap-5 mt-10 max-sm:flex max-sm:flex-col ">
