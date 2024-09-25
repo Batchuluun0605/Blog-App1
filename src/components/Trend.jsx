@@ -1636,7 +1636,7 @@ export default function TrendData() {
   ]);
 
   return (
-    <div className="flex flex-wrap gap-5 max-sm:flex max-sm:flex-col">
+    <div className="flex flex-wrap justify-between max-sm:flex max-sm:flex-col">
       {data.slice(31, 35).map((e, index) => {
         return (
           <div
