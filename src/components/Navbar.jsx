@@ -13,12 +13,6 @@ export default function Navbar() {
       <div className="w-4 h-4 items-center ">
         <NavLog />
       </div>
-      <div className="hidden max-sm:flex max-sm:">
-        <button onClick={() => setOpen(!open)}>
-          {open === false ? <Menu /> : <Close />}
-        </button>
-        {open && <ResMenu setOpen={setOpen} />}
-      </div>
 
       <div className="py-2 max-sm:hidden">
         <input

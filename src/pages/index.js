@@ -8,7 +8,7 @@ import TrendData from "@/components/Trend";
 export default function Home() {
   return (
     <div>
-      <div className="px-20 flex flex-col w-full m-auto box-border gap-24 ">
+      <div className="md:px-20 flex flex-col w-full m-auto box-border gap-24 sm:px-5 ">
         <section className=" max-sm:px-10">
           <Navbar />
         </section>

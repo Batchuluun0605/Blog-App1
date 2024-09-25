@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 
 const api =
   "https://newsapi.org/v2/everything?q=tesla&from=2024-08-25&sortBy=publishedAt&apiKey=b49a6413079a46baad1cb52df8853e59";
@@ -18,7 +17,6 @@ export default function TrendData() {
   return (
     <div className="flex flex-wrap gap-5 max-sm:flex max-sm:flex-col">
       {data.slice(30, 34).map((e, index) => {
-        console.log(e);
         return (
           <div
             key={index}

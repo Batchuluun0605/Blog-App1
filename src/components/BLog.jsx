@@ -2,16 +2,12 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 const api =
   "https://newsapi.org/v2/everything?q=tesla&from=2024-08-25&sortBy=publishedAt&apiKey=b49a6413079a46baad1cb52df8853e59";
-import Link from "next/link";
 
 export default function BlogData() {
   const [data, setData] = useState([]);
   const initData = useRef([]);
-  const router = useRouter();
-  const view = () => {};
   const getData = async () => {
     try {
       const res = await axios.get(api);
@@ -22,11 +18,6 @@ export default function BlogData() {
   };
   // const reset = () => setData([]);
 
-  const filter = (tag) => {
-    setData(() =>
-      initData.current.filter((el) => el.tag_list.some((c) => c.includes(tag)))
-    );
-  };
   const [add, setAdd] = useState(10);
 
   const handler = () => {
